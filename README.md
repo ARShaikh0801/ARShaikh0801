@@ -1,25 +1,216 @@
 <div align="center">
-# 💫 About Me:
-I'm a final-year BTech student in Information and Communication Technology at VGEC, Ahmedabad, with a strong focus on full-stack web development. I've built production-ready applications using Django, React, and PostgreSQL — including Articlio, a blogging platform with role-based authentication and SEO optimization, and Papertrail, a notes application with JWT authentication and MongoDB integration. I enjoy solving real-world problems through clean, scalable code and have hands-on experience with both backend architecture and responsive frontend design. Currently maintaining an 8.39 CGPA while actively building projects that bridge technical functionality with user-friendly interfaces.
 
+# 👋 Hi, I'm Abdulrauf Shaikh
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/a_r_0801) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/shaikh-abdulrauf-asifparvez-b4485435a) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:arauf0801@gmail.com) 
+### 🚀 Full-Stack Developer | ICT Student @ VGEC | Building Real Solutions
 
-# 💻 Tech Stack:
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=flat&logo=render&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=flat&logo=bootstrap&logoColor=white) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white) ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=flat&logo=django&logoColor=white&color=ff1709&labelColor=gray) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi) ![JWT](https://img.shields.io/badge/JWT-black?style=flat&logo=JSON%20web%20tokens) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white) ![Gunicorn](https://img.shields.io/badge/gunicorn-%298729.svg?style=flat&logo=gunicorn&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=flat&logo=sqlite&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=ARShaikh0801&theme=radical&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=ARShaikh0801&theme=radical&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=ARShaikh0801&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shaikhabdulrauf-asifparvez-b4485435a/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ARShaikh0801)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arauf0801@gmail.com)
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=ARShaikh0801&theme=radical&no-frame=false&no-bg=false&margin-w=4)
+</div>
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+---
 
+## 💫 About Me
 
+```python
+class Developer:
+    def __init__(self):
+        self.name = "Abdulrauf Shaikh"
+        self.role = "Full-Stack Developer"
+        self.education = "BTech ICT @ VGEC Ahmedabad"
+        self.cgpa = 8.39
+        self.location = "Ahmedabad, Gujarat"
+        
+    def get_current_focus(self):
+        return [
+            "Building production-ready web applications",
+            "Mastering Django & React ecosystem",
+            "Preparing for campus placements",
+            "Contributing to open-source"
+        ]
+    
+    def say_hi(self):
+        print("Let's build something amazing together!")
 
+me = Developer()
+me.say_hi()
+```
+
+🎓 **Final Year ICT Student** passionate about creating scalable, user-centered web applications  
+💼 **8.39 CGPA** with hands-on experience in full-stack development  
+🌱 Currently deepening expertise in **Django REST Framework**, **React**, and **System Design**  
+⚡ Love solving real-world problems through clean, maintainable code
+
+---
+
+## 🛠️ Tech Stack
+
+### **Languages**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+
+### **Frontend**
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+### **Backend**
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![DRF](https://img.shields.io/badge/Django_REST-092E20?style=for-the-badge&logo=django&logoColor=white)
+
+### **Databases**
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+
+### **Tools & Technologies**
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+---
+
+## 🚀 Featured Projects
+
+### 📝 [Papertrail](https://github.com/ARShaikh0801/Papertrail) - Notes Web Application
+> **React • Django • MongoDB • JWT Authentication**
+
+A modern notes application with warm editorial aesthetic featuring:
+- 🎨 Beautiful UI with cream/amber/rust color palette
+- 🔐 JWT-based authentication system
+- 📱 Fully responsive design
+- ✅ Checklist and rich text note support
+- 🔍 Real-time search and filtering
+
+```
+Frontend: React (Vite), CSS Variables
+Backend: Django REST Framework
+Database: MongoDB (mongoengine)
+Auth: JWT tokens with refresh mechanism
+```
+
+---
+
+### 📰 [Articlio](https://github.com/ARShaikh0801/Articlio) - Blogging Platform
+> **Django • PostgreSQL • Tailwind CSS • SEO Optimized**
+
+Production-ready blogging platform with advanced features:
+- 👥 Role-based authentication (Reader/Author)
+- 💬 Threaded comments system
+- 📊 Session-based view tracking (prevents artificial inflation)
+- 🔖 Bookmarks, likes, and draft publishing
+- 🔍 SEO-friendly with dynamic slugs and meta descriptions
+
+```
+Stack: Django, PostgreSQL, Tailwind CSS
+Features: Rich text editor, Email verification, Session management
+Deployed: Production-ready architecture
+```
+
+---
+
+### 🛒 [BuyCart](https://github.com/ARShaikh0801/buyCart) - E-Commerce Platform
+> **Django • Bootstrap • JavaScript • LocalStorage**
+
+Full-featured e-commerce application:
+- 🛍️ Product catalog with filtering
+- 🔒 Secure authentication system
+- 🛒 Dynamic cart using LocalStorage
+- 💳 Responsive checkout flow
+- 📱 Mobile-optimized interface
+
+---
+
+### 💼 [WorkWhiz](https://github.com/ARShaikh0801/WorkWhiz) - Labour Job Portal
+> **Django • HTML/CSS • Google Translate API**
+
+Multi-role job portal connecting workers and contractors:
+- 👷 Separate dashboards for workers & contractors
+- 🌐 Multilingual support (Google Translate API)
+- 📋 Job posting and application system
+- 🔍 Advanced worker search and filtering
+- 📱 Pure CSS responsive design (minimal JavaScript)
+
+---
+
+### 🎮 [KBC Quiz App](https://github.com/ARShaikh0801/KBC-quiz-app)
+> **HTML • CSS • JavaScript**
+
+Interactive quiz application with:
+- 🎲 Random question selection from pool
+- 🏆 Dynamic scoring system
+- ⏭️ Smooth navigation and transitions
+- 📱 Responsive design
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ARShaikh0801&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ARShaikh0801&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=F85D7F)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ARShaikh0801&theme=radical&hide_border=true&background=0D1117&ring=F85D7F&fire=F8D866&currStreakLabel=F85D7F)
+
+</div>
+
+---
+
+## 🎓 Education & Certifications
+
+🎓 **BTech in Information and Communication Technology**  
+📍 Vishwakarma Government Engineering College, Ahmedabad  
+📊 CGPA: **8.39** | Expected Graduation: 2027
+
+### Certifications
+- 🐍 **Python Programming Course** - Scaler (Apr 2025)
+- 📊 **PowerBI Dashboard Creation** - Tata Micro-Internship (Apr 2025)
+- 🌐 **Web Development Course** - LaunchEd (Aug 2025)
+
+---
+
+## 💼 What I'm Working On
+
+- 🔨 Enhancing **Papertrail** with advanced note organization features
+- 📚 Building new features for **Articlio** blogging platform
+- 🎯 Preparing for campus placements (DSA + System Design)
+- 🌱 Learning advanced **Django REST Framework** patterns
+- 🤝 Open to collaboration on Django/React projects
+
+---
+
+## 📫 Let's Connect!
+
+I'm always open to interesting conversations and collaboration opportunities!
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shaikhabdulrauf-asifparvez-b4485435a/)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:arauf0801@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-100000?style=for-the-badge&logo=github)](https://github.com/ARShaikh0801)
+
+</div>
+
+---
+
+<div align="center">
+
+### 💭 *"Clean code always looks like it was written by someone who cares."*
+
+![Profile Views](https://komarev.com/ghpvc/?username=ARShaikh0801&color=F85D7F&style=for-the-badge)
+
+⭐️ From [ARShaikh0801](https://github.com/ARShaikh0801) with ❤️
 
 </div>
