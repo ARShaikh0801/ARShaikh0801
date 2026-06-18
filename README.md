@@ -4,6 +4,7 @@
 
 ### 🚀 Full-Stack Developer | ICT Student @ VGEC | Building Real Solutions
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white)](https://arshaikh0801.github.io/ARShaikh0801/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shaikhabdulrauf-asifparvez-b4485435a/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ARShaikh0801)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arauf0801@gmail.com)
@@ -26,9 +27,9 @@ class Developer:
     def get_current_focus(self):
         return [
             "Building production-ready web applications",
-            "Mastering Django & React ecosystem",
+            "Mastering Django & REST Framework",
             "Preparing for campus placements",
-            "Contributing to open-source"
+            "Exploring backend architecture & system design"
         ]
     
     def say_hi(self):
@@ -40,7 +41,7 @@ me.say_hi()
 
 🎓 **Final Year ICT Student** passionate about creating scalable, user-centered web applications  
 💼 **8.39 CGPA** with hands-on experience in full-stack development  
-🌱 Currently deepening expertise in **Django REST Framework**, **React**, and **System Design**  
+🌱 Currently deepening expertise in **Django REST Framework** and **System Design**  
 ⚡ Love solving real-world problems through clean, maintainable code
 
 ---
@@ -52,7 +53,6 @@ me.say_hi()
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ### **Frontend**
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -62,81 +62,85 @@ me.say_hi()
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![DRF](https://img.shields.io/badge/Django_REST-092E20?style=for-the-badge&logo=django&logoColor=white)
 
-### **Databases**
+### **Databases & Cloud**
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 
 ### **Tools & Technologies**
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ---
 
 ## 🚀 Featured Projects
 
-### 📝 [Papertrail](https://github.com/ARShaikh0801/Papertrail) - Notes Web Application
-> **React • Django • MongoDB • JWT Authentication**
+### 📰 [Articlio](https://github.com/ARShaikh0801/Articlio) - Blogging Platform
+> **Django • PostgreSQL • Tailwind CSS v4 • OAuth**
 
-A modern notes application with warm editorial aesthetic featuring:
-- 🎨 Beautiful UI with cream/amber/rust color palette
-- 🔐 JWT-based authentication system
-- 📱 Fully responsive design
-- ✅ Checklist and rich text note support
-- 🔍 Real-time search and filtering
+Production-ready blogging platform with advanced features:
+- 🔐 OAuth authentication (Google/GitHub) with role-based access (Reader/Author)
+- 🎨 Dynamic theming engine with 5 accent themes
+- 💬 Nested threaded comments and reading history with scroll progress tracking
+- ⚡ Bloom Filter optimization for instant username validation
+- 🔒 CSP security headers and WhiteNoise static file caching
 
 ```
-Frontend: React (Vite), CSS Variables
-Backend: Django REST Framework
-Database: MongoDB (mongoengine)
-Auth: JWT tokens with refresh mechanism
+Stack: Django 5.2, PostgreSQL, Tailwind CSS v4, OAuth, WhiteNoise, Render
+Live: https://articlio-nb11.onrender.com
 ```
 
 ---
 
-### 📰 [Articlio](https://github.com/ARShaikh0801/Articlio) - Blogging Platform
-> **Django • PostgreSQL • Tailwind CSS • SEO Optimized**
+### 💼 [WorkWhiz](https://github.com/ARShaikh0801/WorkWhiz) - Labour Job Portal
+> **Django • PostgreSQL • Cloudinary • Render**
 
-Production-ready blogging platform with advanced features:
-- 👥 Role-based authentication (Reader/Author)
-- 💬 Threaded comments system
-- 📊 Session-based view tracking (prevents artificial inflation)
-- 🔖 Bookmarks, likes, and draft publishing
-- 🔍 SEO-friendly with dynamic slugs and meta descriptions
+Multi-role job portal connecting workers and contractors:
+- 👷 Role-specific dashboards with bidirectional rating system
+- 🌐 Multilingual support via Google Translate API (18 Indian languages)
+- 🔐 Secure authentication with email password reset and Cloudinary image uploads
+- ☁️ Deployed in production with PostgreSQL (Supabase) and WhiteNoise
 
 ```
-Stack: Django, PostgreSQL, Tailwind CSS
-Features: Rich text editor, Email verification, Session management
-Deployed: Production-ready architecture
+Stack: Django 5.x, PostgreSQL, Cloudinary, Google Translate API, Render, Supabase
+Live: https://workwhiz.onrender.com
 ```
 
 ---
 
 ### 🛒 [BuyCart](https://github.com/ARShaikh0801/buyCart) - E-Commerce Platform
-> **Django • Bootstrap • JavaScript • LocalStorage**
+> **Django • Bootstrap • Stripe API**
 
-Full-featured e-commerce application:
-- 🛍️ Product catalog with filtering
-- 🔒 Secure authentication system
-- 🛒 Dynamic cart using LocalStorage
-- 💳 Responsive checkout flow
-- 📱 Mobile-optimized interface
+Full-featured e-commerce application with dealer portal:
+- 🛍️ Product catalog, cart management, and order tracking
+- 💳 Stripe API integration for secure end-to-end payments
+- 📊 Dedicated Dealer Dashboard with inventory management and Quill Editor blogging
+- 📱 Mobile-first responsive UI with Bootstrap 5
+
+```
+Stack: Django, Bootstrap 5, JavaScript, SQLite, Stripe API, Quill Editor
+```
 
 ---
 
-### 💼 [WorkWhiz](https://github.com/ARShaikh0801/WorkWhiz) - Labour Job Portal
-> **Django • HTML/CSS • Google Translate API**
+### 📝 [Papertrail](https://github.com/ARShaikh0801/Papertrail) - Notes Web Application
+> **Django • MongoDB • JWT Authentication**
 
-Multi-role job portal connecting workers and contractors:
-- 👷 Separate dashboards for workers & contractors
-- 🌐 Multilingual support (Google Translate API)
-- 📋 Job posting and application system
-- 🔍 Advanced worker search and filtering
-- 📱 Pure CSS responsive design (minimal JavaScript)
+A notes application with warm editorial aesthetic featuring:
+- 🎨 Clean UI with cream/amber/rust color palette
+- 🔐 JWT-based authentication system
+- ✅ Checklist and rich text note support
+- 🔍 Real-time search and filtering
+
+```
+Backend: Django REST Framework
+Database: MongoDB (mongoengine)
+Auth: JWT tokens with refresh mechanism
+```
 
 ---
 
@@ -146,8 +150,7 @@ Multi-role job portal connecting workers and contractors:
 Interactive quiz application with:
 - 🎲 Random question selection from pool
 - 🏆 Dynamic scoring system
-- ⏭️ Smooth navigation and transitions
-- 📱 Responsive design
+- 📱 Responsive design with custom CSS transitions
 
 ---
 
@@ -173,18 +176,21 @@ Interactive quiz application with:
 
 ### Certifications
 - 🐍 **Python Programming Course** - Scaler (Apr 2025)
-- 📊 **PowerBI Dashboard Creation** - Tata Micro-Internship (Apr 2025)
+- 📊 **Data Visualisation: Empowering Business with Effective Insights** - Tata/Forage (Apr 2025)
 - 🌐 **Web Development Course** - LaunchEd (Aug 2025)
+
+### 🏆 Hackathons
+- **SBS Hack The Gap 2026** - National-Level Hackathon, Shanti Business School, Ahmedabad
+- **Hack With Gujarat** - DevXpanse
 
 ---
 
 ## 💼 What I'm Working On
 
-- 🔨 Enhancing **Papertrail** with advanced note organization features
-- 📚 Building new features for **Articlio** blogging platform
+- 🔨 Enhancing **Articlio** with new blogging features
 - 🎯 Preparing for campus placements (DSA + System Design)
-- 🌱 Learning advanced **Django REST Framework** patterns
-- 🤝 Open to collaboration on Django/React projects
+- 🌱 Deepening expertise in **Django REST Framework**
+- 🤝 Open to collaboration on Django-based projects
 
 ---
 
@@ -194,6 +200,7 @@ I'm always open to interesting conversations and collaboration opportunities!
 
 <div align="center">
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF5722?style=for-the-badge&logo=googlechrome)](https://arshaikh0801.github.io/ARShaikh0801/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shaikhabdulrauf-asifparvez-b4485435a/)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:arauf0801@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-100000?style=for-the-badge&logo=github)](https://github.com/ARShaikh0801)
