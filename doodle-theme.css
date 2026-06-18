@@ -1,0 +1,1491 @@
+/*
+ * DOODLE THEME - HAND-DRAWN / SKETCH STYLE
+ * All selectors scoped under [data-theme-style="doodle"]
+ * Works with both data-theme="dark" and data-theme="light"
+ */
+
+/* DOODLE DARK MODE - Design Tokens */
+[data-theme-style="doodle"] {
+  /* Warm dark backgrounds */
+  --navy-950: #181825;
+  --navy-900: #1e1e2e;
+  --navy-800: #252538;
+  --navy-700: #2c2c44;
+  --navy-600: #353552;
+  --navy-500: #3f3f61;
+  --navy-400: #4f4f7a;
+  --navy-300: #67679e;
+  --navy-200: #8c8cc7;
+  --navy-100: #b8b8e0;
+
+  /* Peach / Coral accents */
+  --amber-500: #f38ba8;
+  --amber-400: #f5c2e7;
+  --amber-300: #f2cdcd;
+  --amber-200: #f9e2af;
+  --amber-100: #cdd6f4;
+  --amber-glow: rgba(243, 139, 168, 0.15);
+  --amber-glow-strong: rgba(243, 139, 168, 0.35);
+
+  /* Neutrals */
+  --white: #cdd6f4;
+  --white-90: rgba(205, 214, 244, 0.9);
+  --white-70: rgba(205, 214, 244, 0.7);
+  --white-50: rgba(205, 214, 244, 0.5);
+  --white-20: rgba(205, 214, 244, 0.2);
+  --white-10: rgba(205, 214, 244, 0.1);
+  --white-05: rgba(205, 214, 244, 0.05);
+
+  /* Glass adjustments */
+  --glass-bg: rgba(24, 24, 37, 0.82);
+  --glass-border: rgba(243, 139, 168, 0.25);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  /* Doodle-specific tokens */
+  --doodle-border-color: #cdd6f4;
+  --doodle-sketch-color: rgba(205, 214, 244, 0.08);
+  --doodle-paper-bg: #181825;
+  --doodle-card-bg: #1e1e2e;
+  --doodle-font-heading: 'Caveat', 'Patrick Hand', cursive;
+  --doodle-font-accent: 'Patrick Hand', 'Caveat', cursive;
+}
+
+/* DOODLE LIGHT MODE - Design Tokens */
+[data-theme-style="doodle"][data-theme="light"] {
+  /* Warm notebook/sketchpad backgrounds */
+  --navy-950: #fcf6eb;
+  --navy-900: #f7ecd6;
+  --navy-800: #ebd8be;
+  --navy-700: #dec19e;
+  --navy-600: #b59b7d;
+  --navy-500: #8f795d;
+  --navy-400: #6b5840;
+  --navy-300: #54432f;
+  --navy-200: #3b2c1b;
+  --navy-100: #1f1406;
+
+  /* Deeper coral/terracotta for light bg readability */
+  --amber-500: #d05b38;
+  --amber-400: #e07a5f;
+  --amber-300: #f29c7e;
+  --amber-200: #f8c2b0;
+  --amber-100: #fdf0eb;
+  --amber-glow: rgba(208, 91, 56, 0.12);
+  --amber-glow-strong: rgba(208, 91, 56, 0.25);
+
+  /* Neutrals inverted */
+  --white: #1f1406;
+  --white-90: rgba(31, 20, 6, 0.9);
+  --white-70: rgba(31, 20, 6, 0.7);
+  --white-50: rgba(31, 20, 6, 0.5);
+  --white-20: rgba(31, 20, 6, 0.2);
+  --white-10: rgba(31, 20, 6, 0.1);
+  --white-05: rgba(31, 20, 6, 0.05);
+
+  /* Glass for light */
+  --glass-bg: rgba(252, 246, 235, 0.88);
+  --glass-border: rgba(208, 91, 56, 0.22);
+  --glass-shadow: 0 8px 32px rgba(31, 20, 6, 0.08);
+
+  /* Doodle light-specific */
+  --doodle-border-color: #1f1406;
+  --doodle-sketch-color: rgba(31, 20, 6, 0.08);
+  --doodle-paper-bg: #fcf6eb;
+  --doodle-card-bg: #f7ecd6;
+}
+
+/* GLOBAL DOODLE OVERRIDES */
+
+/* Apply filters to pseudo-elements ONLY. Never directly to elements containing text. */
+[data-theme-style="doodle"] .btn::before,
+[data-theme-style="doodle"] .social-icon::before,
+[data-theme-style="doodle"] .edu-icon::before,
+[data-theme-style="doodle"] .project-link::before,
+[data-theme-style="doodle"] .project-link-github::before,
+[data-theme-style="doodle"] .outcome-num::before,
+[data-theme-style="doodle"] .skill-cat-icon::before,
+[data-theme-style="doodle"] .cert-link::before,
+[data-theme-style="doodle"] .cert-link-view::before,
+[data-theme-style="doodle"] .theme-style-btn::before,
+[data-theme-style="doodle"] .theme-style-dropdown::before,
+[data-theme-style="doodle"] .theme-toggle-btn::before,
+[data-theme-style="doodle"] .footer-socials a::before {
+  filter: url(#doodle-wobble);
+}
+
+[data-theme-style="doodle"] .btn-primary::before,
+[data-theme-style="doodle"] .btn-outline::before,
+[data-theme-style="doodle"] .btn-send::before {
+  filter: url(#doodle-wobble-button);
+}
+[data-theme-style="doodle"] .btn-send span{
+  filter: none;
+}
+
+/* Background texture — subtle graph paper / notebook pattern */
+[data-theme-style="doodle"] body {
+  background-image:
+    linear-gradient(var(--doodle-sketch-color) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--doodle-sketch-color) 1.5px, transparent 1.5px);
+  background-size: 35px 35px;
+  background-attachment: fixed;
+}
+
+/* Headings use hand-drawn font */
+[data-theme-style="doodle"] .section-title {
+  font-family: var(--doodle-font-heading);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  -webkit-text-fill-color: unset;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: var(--amber-500);
+}
+
+/* Section title underline → wavy sketch line */
+[data-theme-style="doodle"] .section-title::after {
+  height: 6px;
+  width: 6rem;
+  background: none;
+  border-bottom: 3.5px solid var(--amber-500);
+  border-radius: 0;
+  filter: url(#doodle-wobble);
+  transform: rotate(-1.5deg);
+}
+
+/* NAVBAR - DOODLE */
+[data-theme-style="doodle"] .navbar {
+  border-bottom: 3px solid var(--doodle-border-color);
+  backdrop-filter: blur(14px);
+}
+
+[data-theme-style="doodle"] .nav-logo {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.9rem;
+  -webkit-text-fill-color: unset;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: var(--amber-500);
+  transform: rotate(-3deg);
+  display: inline-block;
+  font-weight: bold;
+}
+
+[data-theme-style="doodle"] .nav-links a {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+[data-theme-style="doodle"] .nav-links a::after {
+  height: 3px;
+  background: none;
+  border-bottom: 2.5px solid var(--amber-500);
+  filter: url(#doodle-wobble-button);
+}
+
+[data-theme-style="doodle"] .nav-resume-link {
+  font-family: var(--doodle-font-accent) !important;
+  font-size: 1.05rem !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 1 !important;
+  padding: 0.25rem 0.75rem !important;
+  top: -2px !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+[data-theme-style="doodle"] .nav-resume-link::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 2.5px solid var(--doodle-border-color) !important;
+  border-radius: 12px 4px 12px 4px/4px 12px 4px 12px !important;
+  background: var(--doodle-card-bg) !important;
+  z-index: -1 !important;
+  filter: url(#doodle-wobble-button) !important;
+  transition: all 0.2s ease;
+}
+
+[data-theme-style="doodle"] .nav-resume-link:hover {
+  transform: scale(1.05) rotate(-1deg) !important;
+  color: var(--amber-500) !important;
+}
+
+[data-theme-style="doodle"] .nav-resume-link:hover::before {
+  border-color: var(--amber-500) !important;
+  box-shadow: 3px 3px 0 var(--doodle-border-color) !important;
+}
+
+
+/* BUTTON SYSTEM (Wobbly outlines, crisp text content) */
+[data-theme-style="doodle"] .btn,
+[data-theme-style="doodle"] .social-icon,
+[data-theme-style="doodle"] .project-link,
+[data-theme-style="doodle"] .project-link-github,
+[data-theme-style="doodle"] .cert-link,
+[data-theme-style="doodle"] .cert-link-view,
+[data-theme-style="doodle"] .theme-style-btn,
+[data-theme-style="doodle"] .theme-toggle-btn,
+[data-theme-style="doodle"] .footer-socials a {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+[data-theme-style="doodle"] .btn::before,
+[data-theme-style="doodle"] .social-icon::before,
+[data-theme-style="doodle"] .project-link::before,
+[data-theme-style="doodle"] .project-link-github::before,
+[data-theme-style="doodle"] .cert-link::before,
+[data-theme-style="doodle"] .cert-link-view::before,
+[data-theme-style="doodle"] .theme-style-btn::before,
+[data-theme-style="doodle"] .theme-toggle-btn::before,
+[data-theme-style="doodle"] .footer-socials a::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 3px solid var(--doodle-border-color);
+  z-index: -1;
+  box-shadow: 4px 4px 0 var(--doodle-border-color);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme-style="doodle"] .btn::before {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+[data-theme-style="doodle"] .btn-primary {
+  color: var(--navy-950) !important;
+  transform: rotate(-1deg);
+  font-family: var(--doodle-font-accent);
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+[data-theme-style="doodle"] .btn-primary::before {
+  background: var(--amber-500);
+}
+[data-theme-style="doodle"] .btn-primary:hover {
+  transform: rotate(1deg) translateY(-2px);
+}
+[data-theme-style="doodle"] .btn-primary:hover::before {
+  box-shadow: 6px 6px 0 var(--doodle-border-color);
+  background: var(--amber-400);
+}
+
+/* Light Mode Overrides for Primary Button to ensure high contrast and readability */
+[data-theme-style="doodle"][data-theme="light"] .btn-primary {
+  color: var(--navy-100) !important; /* Dark brown/black text for high contrast */
+}
+[data-theme-style="doodle"][data-theme="light"] .btn-primary::before {
+  background: var(--amber-300); /* Lighter accent background */
+}
+[data-theme-style="doodle"][data-theme="light"] .btn-primary:hover::before {
+  background: var(--amber-200);
+}
+
+[data-theme-style="doodle"] .btn-outline {
+  color: var(--white) !important;
+  transform: rotate(1.5deg);
+  font-family: var(--doodle-font-accent);
+  font-weight: bold;
+}
+[data-theme-style="doodle"] .btn-outline::before {
+  background: transparent;
+}
+[data-theme-style="doodle"] .btn-outline:hover {
+  transform: rotate(-1deg) translateY(-2px);
+  color: var(--doodle-paper-bg) !important;
+}
+[data-theme-style="doodle"] .btn-outline:hover::before {
+  box-shadow: 6px 6px 0 var(--doodle-border-color);
+  background: var(--doodle-border-color);
+}
+
+/* LANDING - DOODLE */
+[data-theme-style="doodle"] .landing-section {
+  background: radial-gradient(ellipse at 50% 30%, var(--navy-800), var(--navy-950) 80%);
+  padding-top: 6.875rem;
+  padding-bottom: 5.625rem;
+  box-sizing: border-box;
+}
+
+[data-theme-style="doodle"] .landing-greeting {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.2rem;
+  letter-spacing: 0.125rem;
+  color: var(--amber-500);
+  margin-bottom: 0.5rem;
+}
+
+[data-theme-style="doodle"] .landing-name {
+  font-family: var(--doodle-font-heading);
+  font-weight: 700;
+  -webkit-text-fill-color: unset;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: var(--white);
+  text-shadow: 2px 2px 0px var(--amber-glow-strong);
+  font-size: clamp(2.5rem, 6.5vw, 3.8rem);
+  margin-bottom: 0.75rem;
+}
+
+[data-theme-style="doodle"] .landing-designations {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+[data-theme-style="doodle"] .landing-intro {
+  font-family: var(--doodle-font-accent);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+[data-theme-style="doodle"] .landing-cta {
+  margin-bottom: 1.25rem;
+  gap: 0.75rem;
+}
+
+[data-theme-style="doodle"] .landing-cta .btn {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+}
+
+[data-theme-style="doodle"] .social-icon::before {
+  border-radius: 20px 10px 20px 10px/10px 20px 10px 20px;
+  background: var(--white-05);
+}
+[data-theme-style="doodle"] .social-icon:hover {
+  transform: translateY(-4px) rotate(6deg);
+  color: var(--amber-500);
+}
+[data-theme-style="doodle"] .social-icon:hover::before {
+  border-radius: 10px 20px 10px 20px/20px 10px 20px 10px;
+  border-color: var(--amber-500);
+  box-shadow: 5px 5px 0 var(--amber-500);
+}
+
+[data-theme-style="doodle"] .scroll-arrow {
+  border-right: 3px solid var(--amber-500);
+  border-bottom: 3px solid var(--amber-500);
+}
+
+/* Particles: softer, slightly larger for doodle feel */
+[data-theme-style="doodle"] .particle {
+  border-radius: 5px;
+  transform: rotate(45deg);
+  filter: url(#doodle-wobble);
+}
+
+/* CARD DESIGN SYSTEM (Wobbly backgrounds, crisp text & images) */
+[data-theme-style="doodle"] .about-card-front,
+[data-theme-style="doodle"] .about-card-back {
+  position: absolute;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  z-index: 1;
+}
+
+[data-theme-style="doodle"] .exp-card,
+[data-theme-style="doodle"] .edu-content,
+[data-theme-style="doodle"] .project-card,
+[data-theme-style="doodle"] .skill-category,
+[data-theme-style="doodle"] .cert-card,
+[data-theme-style="doodle"] .achieve-card,
+[data-theme-style="doodle"] .contact-form-wrapper,
+[data-theme-style="doodle"] .contact-info-panel {
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  z-index: 1;
+}
+
+[data-theme-style="doodle"] .about-card-front::before,
+[data-theme-style="doodle"] .about-card-back::before,
+[data-theme-style="doodle"] .exp-card::before,
+[data-theme-style="doodle"] .edu-content::before,
+[data-theme-style="doodle"] .project-card::before,
+[data-theme-style="doodle"] .skill-category::before,
+[data-theme-style="doodle"] .cert-card::before,
+[data-theme-style="doodle"] .achieve-card::before,
+[data-theme-style="doodle"] .contact-form-wrapper::before,
+[data-theme-style="doodle"] .contact-info-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--doodle-card-bg);
+  border: 3px solid var(--doodle-border-color);
+  z-index: -1;
+  filter: url(#doodle-wobble);
+  box-shadow: 6px 6px 0 var(--doodle-border-color);
+}
+
+/* ABOUT - DOODLE */
+[data-theme-style="doodle"] .about-photo-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme-style="doodle"] .about-photo-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -4px; left: -4px; right: -4px; bottom: -4px;
+  border: 4px solid var(--doodle-border-color);
+  border-radius: 20px 40px 20px 40px/40px 20px 40px 20px;
+  box-shadow: 6px 6px 0 var(--amber-500);
+  z-index: 2;
+  pointer-events: none;
+  filter: url(#doodle-wobble-large);
+}
+
+[data-theme-style="doodle"] .about-photo {
+  border: none !important;
+  border-radius: 16px 36px 16px 36px/36px 16px 36px 16px;
+  filter: none !important; /* Keep profile photo clean and unwarped */
+}
+
+/* Body Text Readability Enhancements */
+[data-theme-style="doodle"] .about-paragraph,
+[data-theme-style="doodle"] .exp-list li,
+[data-theme-style="doodle"] .project-desc,
+[data-theme-style="doodle"] .edu-highlights li,
+[data-theme-style="doodle"] .achieve-desc,
+[data-theme-style="doodle"] .about-card-back p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--white-90);
+}
+
+[data-theme-style="doodle"] .about-card {
+  perspective: 1000px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme-style="doodle"] .about-card-front::before,
+[data-theme-style="doodle"] .about-card-back::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--doodle-card-bg);
+  border: 3px solid var(--doodle-border-color);
+  z-index: -1;
+  filter: url(#doodle-wobble);
+  box-shadow: 6px 6px 0 var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .about-card-front::before {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+[data-theme-style="doodle"] .about-card:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+[data-theme-style="doodle"] .about-card:nth-child(odd) {
+  transform: rotate(-1.2deg);
+}
+
+[data-theme-style="doodle"] .about-card-front h3 {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.45rem;
+}
+
+[data-theme-style="doodle"] .about-card-back::before {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  background: var(--navy-800);
+}
+
+[data-theme-style="doodle"] .about-btn {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  position: relative;
+  z-index: 1;
+  font-family: var(--doodle-font-accent);
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--white) !important;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+[data-theme-style="doodle"] .about-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 3px solid var(--doodle-border-color);
+  border-radius: 120px 10px 100px 10px/10px 100px 10px 120px;
+  background: var(--doodle-card-bg);
+  box-shadow: 3px 3px 0 var(--doodle-border-color);
+  z-index: -1;
+  filter: url(#doodle-wobble-button);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+[data-theme-style="doodle"] .about-btn::after {
+  display: none;
+}
+
+[data-theme-style="doodle"] .about-btn:hover {
+  transform: scale(1.03) rotate(-1deg);
+  color: var(--amber-500) !important;
+}
+
+[data-theme-style="doodle"] .about-btn.resume-btn {
+  color: var(--navy-950) !important;
+}
+
+[data-theme-style="doodle"] .about-btn.resume-btn::before {
+  background: var(--amber-500) !important;
+  border-color: var(--amber-500) !important;
+  box-shadow: 3.5px 3.5px 0 var(--doodle-border-color) !important;
+}
+
+[data-theme-style="doodle"] .about-btn.resume-btn:hover {
+  color: var(--white) !important;
+}
+
+[data-theme-style="doodle"] .about-btn.resume-btn:hover::before {
+  background: var(--doodle-card-bg) !important;
+  border-color: var(--doodle-border-color) !important;
+  box-shadow: 4.5px 4.5px 0 var(--doodle-border-color) !important;
+}
+
+[data-theme-style="doodle"] .about-btn:hover::before {
+  border-color: var(--amber-500);
+  background: var(--amber-glow);
+  box-shadow: 4px 4px 0 var(--amber-500);
+}
+
+/* EXPERIENCE - DOODLE */
+[data-theme-style="doodle"] .exp-card {
+  transform: rotate(0.4deg);
+}
+
+[data-theme-style="doodle"] .exp-card::before {
+  border-radius: 15px 255px 15px 225px/225px 15px 255px 15px;
+}
+
+[data-theme-style="doodle"] .exp-left {
+  border-right: 3.5px solid var(--doodle-border-color);
+  background: linear-gradient(145deg, var(--navy-800), var(--navy-900));
+}
+
+[data-theme-style="doodle"] .exp-badge {
+  font-family: var(--doodle-font-accent);
+  border: 2px solid var(--amber-500);
+  background: var(--amber-glow);
+  border-radius: 15px 5px 15px 5px/5px 15px 5px 15px;
+  font-weight: bold;
+}
+
+[data-theme-style="doodle"] .exp-designation {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.6rem;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .exp-company {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.15rem;
+}
+
+[data-theme-style="doodle"] .exp-list li::before {
+  background: none;
+  border: 2.5px solid var(--amber-500);
+  width: 9px;
+  height: 9px;
+  top: 8px;
+  border-radius: 50% 40% 60% 45%;
+  filter: url(#doodle-wobble);
+}
+
+[data-theme-style="doodle"] .exp-right h4 {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.25rem;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+[data-theme-style="doodle"] .exp-right h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  border-bottom: 2.5px solid var(--amber-500);
+  filter: url(#doodle-wobble-button);
+}
+
+/* EDUCATION - DOODLE */
+[data-theme-style="doodle"] .education-timeline::before {
+  width: 3.5px;
+  background: none;
+  border-left: 3.5px solid var(--doodle-border-color);
+  filter: url(#doodle-wobble-large);
+}
+
+[data-theme-style="doodle"] .edu-icon::before {
+  content: '';
+  position: absolute;
+  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  border: 3px solid var(--doodle-border-color);
+  border-radius: 20px 10px 20px 10px/10px 20px 10px 20px;
+  background: var(--amber-500);
+  z-index: -1;
+}
+[data-theme-style="doodle"] .edu-icon {
+  background: transparent !important;
+  border: none !important;
+  color: var(--navy-950);
+}
+
+[data-theme-style="doodle"] .edu-content {
+  transform: rotate(-0.5deg);
+}
+
+[data-theme-style="doodle"] .edu-content::before {
+  border-radius: 255px 20px 225px 20px/20px 225px 20px 255px;
+}
+
+[data-theme-style="doodle"] .edu-card:nth-child(even) .edu-content {
+  transform: rotate(0.6deg);
+}
+[data-theme-style="doodle"] .edu-card:nth-child(even) .edu-content::before {
+  border-radius: 20px 255px 20px 225px/225px 20px 255px 20px;
+}
+
+[data-theme-style="doodle"] .edu-content h3 {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.5rem;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .edu-duration {
+  font-family: var(--doodle-font-accent);
+  border: 2px solid var(--amber-500);
+  background: var(--amber-glow);
+  border-radius: 12px 4px 12px 4px/4px 12px 4px 12px;
+  font-weight: bold;
+}
+
+[data-theme-style="doodle"] .edu-institution {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.1rem;
+}
+
+[data-theme-style="doodle"] .edu-mode {
+  border: 1.5px solid var(--white-30);
+  border-radius: 10px 5px/5px 10px;
+  font-family: var(--doodle-font-accent);
+}
+
+[data-theme-style="doodle"] .edu-highlights li::before {
+  content: '✏️';
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+/* PROJECTS - DOODLE */
+[data-theme-style="doodle"] .project-card {
+  margin-bottom: 2.5rem;
+  transform: rotate(-0.4deg);
+}
+
+[data-theme-style="doodle"] .project-card::before {
+  border-radius: 15px 255px 15px 225px/225px 15px 255px 15px;
+  box-shadow: 7px 7px 0 var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .project-card:nth-child(even) {
+  transform: rotate(0.4deg);
+}
+[data-theme-style="doodle"] .project-card:nth-child(even)::before {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+[data-theme-style="doodle"] .project-left {
+  border-right: 3.5px solid var(--doodle-border-color);
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-950));
+}
+
+[data-theme-style="doodle"] .project-number {
+  font-family: var(--doodle-font-heading);
+  color: var(--amber-glow-strong);
+  font-size: 4.5rem;
+  transform: rotate(-8deg);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+[data-theme-style="doodle"] .project-card:hover .project-number {
+  color: var(--amber-500) !important;
+  text-shadow: 0 0 10px var(--amber-glow-strong);
+}
+
+[data-theme-style="doodle"] .project-title {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.8rem;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .project-subtitle {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.1rem;
+}
+
+[data-theme-style="doodle"] .project-link::before {
+  border-radius: 15px 5px 15px 5px/5px 15px 5px 15px;
+  background: var(--amber-500);
+}
+[data-theme-style="doodle"] .project-link {
+  color: var(--navy-950) !important;
+  font-weight: bold;
+}
+[data-theme-style="doodle"] .project-link:hover {
+  transform: scale(1.02) rotate(-1deg);
+}
+[data-theme-style="doodle"] .project-link:hover::before {
+  background: var(--amber-400);
+  box-shadow: 4px 4px 0 var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .project-link-github::before {
+  border-radius: 15px 5px 15px 5px/5px 15px 5px 15px;
+  background: transparent;
+}
+[data-theme-style="doodle"] .project-link-github {
+  color: var(--white) !important;
+}
+[data-theme-style="doodle"] .project-link-github:hover::before {
+  background: var(--doodle-border-color);
+}
+[data-theme-style="doodle"] .project-link-github:hover{
+  color: var(--doodle-paper-bg) !important;
+
+}
+[data-theme-style="doodle"] .outcome-item {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme-style="doodle"] .outcome-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-left: 4px solid var(--amber-500);
+  border-radius: 15px 5px 15px 5px/5px 15px 5px 15px;
+  background: var(--white-05);
+  border-top: 1.5px solid var(--white-10);
+  border-bottom: 1.5px solid var(--white-10);
+  border-right: 1.5px solid var(--white-10);
+  z-index: -1;
+  filter: url(#doodle-wobble); /* Wobbles only the card edge, not the text */
+}
+
+[data-theme-style="doodle"] .outcome-num::before {
+  border-radius: 10px 20px 10px 20px/20px 10px 20px 10px;
+  border: 2px solid var(--amber-500);
+  background: var(--amber-glow);
+}
+[data-theme-style="doodle"] .outcome-num {
+  border: none !important;
+  background: transparent !important;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .project-outcomes h4 {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.25rem;
+}
+
+[data-theme-style="doodle"] .tech-tag {
+  border: 2px solid var(--doodle-border-color);
+  border-radius: 120px 15px 100px 15px/15px 100px 15px 120px;
+  background: var(--white-05);
+  font-family: var(--doodle-font-accent);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+[data-theme-style="doodle"] .tech-tag:hover {
+  background: var(--amber-glow);
+  border-color: var(--amber-500);
+  transform: scale(1.08) rotate(2deg);
+}
+
+/* SKILLS - DOODLE */
+[data-theme-style="doodle"] .skill-category {
+  transform: rotate(0.5deg);
+}
+
+[data-theme-style="doodle"] .skill-category::before {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+[data-theme-style="doodle"] .skill-category:nth-child(even) {
+  transform: rotate(-0.5deg);
+}
+[data-theme-style="doodle"] .skill-category:nth-child(even)::before {
+  border-radius: 15px 255px 15px 225px/225px 15px 255px 15px;
+}
+
+[data-theme-style="doodle"] .skill-cat-icon::before {
+  border-radius: 20px 10px/10px 20px;
+  border: 2.5px solid var(--amber-500);
+  background: var(--amber-glow);
+}
+[data-theme-style="doodle"] .skill-cat-icon {
+  background: transparent !important;
+  border: none !important;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .skill-category h3 {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.45rem;
+}
+
+[data-theme-style="doodle"] .skill-info {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.05rem;
+}
+
+[data-theme-style="doodle"] .skill-bar {
+  height: 0.75rem;
+  background: var(--navy-800);
+  border: 2px solid var(--doodle-border-color);
+  border-radius: 10px 20px 10px 20px/20px 10px 20px 10px;
+  overflow: visible;
+  filter: url(#doodle-wobble-button);
+}
+
+[data-theme-style="doodle"] .skill-fill {
+  border-radius: 8px 15px 8px 15px/15px 8px 15px 8px;
+  background: var(--amber-500);
+  position: relative;
+}
+
+[data-theme-style="doodle"] .skill-fill::after {
+  content: '✏️';
+  position: absolute;
+  right: -0.625rem;
+  top: -0.4375rem;
+  width: auto;
+  height: auto;
+  background: none;
+  font-size: 0.85rem;
+  border-radius: 0;
+}
+
+/* CERTIFICATIONS - DOODLE */
+[data-theme-style="doodle"] .cert-card {
+  overflow: visible;
+  transform: rotate(-0.5deg);
+}
+
+[data-theme-style="doodle"] .cert-card::before {
+  border-radius: 15px 255px 15px 225px/225px 15px 255px 15px;
+}
+
+[data-theme-style="doodle"] .cert-card:nth-child(even) {
+  transform: rotate(0.6deg);
+}
+[data-theme-style="doodle"] .cert-card:nth-child(even)::before {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+[data-theme-style="doodle"] .cert-image-wrapper {
+  border-bottom: 3.5px solid var(--doodle-border-color);
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  filter: none !important; /* DO NOT wobble image wrappers */
+}
+
+[data-theme-style="doodle"] .cert-image-wrapper img {
+  filter: none !important;
+  border-radius: 12px 12px 0 0;
+}
+
+[data-theme-style="doodle"] .cert-body {
+  position: relative;
+  z-index: 2;
+}
+
+[data-theme-style="doodle"] .cert-body h3 {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.35rem;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .cert-link::before {
+  border-radius: 12px 4px 12px 4px/4px 12px 4px 12px;
+  background: var(--amber-500);
+}
+[data-theme-style="doodle"] .cert-link {
+  color: var(--navy-950) !important;
+  font-weight: bold;
+}
+[data-theme-style="doodle"] .cert-link:hover {
+  transform: scale(1.02);
+}
+[data-theme-style="doodle"] .cert-link:hover::before {
+  background: var(--amber-400);
+  box-shadow: 3.5px 3.5px 0 var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .cert-link-view::before {
+  border-radius: 12px 4px 12px 4px/4px 12px 4px 12px;
+  background: transparent;
+}
+[data-theme-style="doodle"] .cert-link-view {
+  color: var(--white) !important;
+}
+[data-theme-style="doodle"] .cert-link-view:hover::before {
+  background: var(--doodle-border-color);
+}
+[data-theme-style="doodle"] .cert-link-view:hover{
+  color: var(--doodle-paper-bg) !important;
+}
+
+/* ACHIEVEMENTS - DOODLE */
+[data-theme-style="doodle"] .achievements-sub {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.25rem;
+}
+
+[data-theme-style="doodle"] .stat-number-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+}
+
+[data-theme-style="doodle"] .stat-number {
+  font-family: var(--doodle-font-heading);
+  font-size: 3.8rem;
+  color: var(--amber-500);
+  transform: rotate(-3deg);
+  display: inline-block;
+  line-height: 1;
+}
+
+[data-theme-style="doodle"] .stat-plus {
+  font-family: var(--doodle-font-heading);
+  font-size: 2.8rem;
+  color: var(--amber-500);
+  transform: rotate(5deg);
+  display: inline-block;
+  line-height: 1;
+}
+
+[data-theme-style="doodle"] .stat-label {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.02rem;
+}
+
+[data-theme-style="doodle"] .achieve-card {
+  transform: rotate(0.4deg);
+}
+
+[data-theme-style="doodle"] .achieve-card::before {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+[data-theme-style="doodle"] .achieve-card:nth-child(even) {
+  transform: rotate(-0.5deg);
+}
+[data-theme-style="doodle"] .achieve-card:nth-child(even)::before {
+  border-radius: 15px 255px 15px 225px/225px 15px 255px 15px;
+}
+
+[data-theme-style="doodle"] .achieve-badge {
+  border: 2px solid;
+  border-radius: 12px 5px 12px 5px/5px 12px 5px 12px;
+  font-family: var(--doodle-font-accent);
+  font-weight: bold;
+}
+
+[data-theme-style="doodle"] .achieve-badge.professional {
+  border-color: var(--amber-500);
+  background: var(--amber-glow);
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .achieve-badge.academic {
+  border-color: #89b4fa;
+  background: rgba(137, 180, 250, 0.15);
+  color: #89b4fa;
+}
+
+[data-theme-style="doodle"] .achieve-year {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.05rem;
+}
+
+[data-theme-style="doodle"] .achieve-card h3 {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.4rem;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .achieve-inst {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.05rem;
+}
+
+[data-theme-style="doodle"] .achieve-image-wrapper {
+  border: 2.5px solid var(--doodle-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  filter: none !important; /* DO NOT wobble achievement image wrappers */
+}
+
+[data-theme-style="doodle"] .achieve-image-wrapper img {
+  filter: none !important;
+  border-radius: 10px;
+}
+
+/* CONTACT - DOODLE */
+[data-theme-style="doodle"] .contact-heading {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.8rem;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .contact-form-wrapper::before {
+  border-radius: 255px 20px 225px 20px/20px 225px 20px 255px;
+  box-shadow: 7px 7px 0 var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .form-group input,
+[data-theme-style="doodle"] .form-group textarea {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.15rem;
+  border-bottom: 2.5px solid var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .form-group input:focus,
+[data-theme-style="doodle"] .form-group textarea:focus {
+  border-bottom-color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .form-group label {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.05rem;
+}
+
+[data-theme-style="doodle"] .form-line {
+  height: 3px;
+  background: none;
+  border-bottom: 2.5px solid var(--amber-500);
+  filter: url(#doodle-wobble-button);
+}
+
+[data-theme-style="doodle"] .contact-info-panel::before {
+  border-radius: 20px 255px 20px 225px/225px 20px 255px 20px;
+  box-shadow: 7px 7px 0 var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .contact-info-panel h3 {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.8rem;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .contact-info-row {
+  border-radius: 12px 4px/4px 12px;
+  font-family: var(--doodle-font-accent);
+  border: 1.5px solid transparent;
+}
+
+[data-theme-style="doodle"] .contact-info-row:hover {
+  border-color: var(--white-10);
+  background: var(--white-05);
+}
+
+[data-theme-style="doodle"] .contact-info-row a,
+[data-theme-style="doodle"] .contact-info-row p {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.1rem;
+}
+
+[data-theme-style="doodle"] .info-label {
+  font-family: var(--doodle-font-accent);
+  font-weight: bold;
+}
+
+/* FOOTER - DOODLE */
+[data-theme-style="doodle"] .footer {
+  border-top: 3px solid var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .footer-logo {
+  font-family: var(--doodle-font-heading);
+  font-size: 1.9rem;
+  -webkit-text-fill-color: unset;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: var(--amber-500);
+  transform: rotate(-3deg);
+  display: inline-block;
+  font-weight: bold;
+}
+
+[data-theme-style="doodle"] .footer-name {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.15rem;
+}
+
+[data-theme-style="doodle"] .footer-tagline {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.05rem;
+}
+
+[data-theme-style="doodle"] .footer-socials a::before {
+  border-radius: 15px 5px 15px 5px/5px 15px 5px 15px;
+}
+[data-theme-style="doodle"] .footer-socials a:hover {
+  transform: translateY(-3px) rotate(-6deg);
+  color: var(--amber-500);
+}
+[data-theme-style="doodle"] .footer-socials a:hover::before {
+  border-radius: 5px 15px 5px 15px/15px 5px 15px 5px;
+  border-color: var(--amber-500);
+  box-shadow: 4px 4px 0 var(--amber-500);
+}
+
+[data-theme-style="doodle"] .footer-copy {
+  font-family: var(--doodle-font-accent);
+}
+
+/* LIGHT MODE SPECIFIC OVERRIDES - DOODLE */
+[data-theme-style="doodle"][data-theme="light"] .landing-section {
+  background: radial-gradient(ellipse at 50% 20%, rgba(208, 91, 56, 0.08), var(--navy-950) 80%);
+}
+
+[data-theme-style="doodle"][data-theme="light"] .tech-tag {
+  background: var(--navy-900);
+  color: var(--amber-500);
+  border-color: var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"][data-theme="light"] .tech-tag:hover {
+  background: var(--amber-500);
+  color: var(--navy-950) !important;
+}
+
+[data-theme-style="doodle"][data-theme="light"] .achieve-badge.academic {
+  background: rgba(2, 132, 199, 0.08);
+  color: #0284c7;
+  border-color: #0284c7;
+}
+
+[data-theme-style="doodle"][data-theme="light"] .achieve-badge.professional {
+  background: var(--amber-glow);
+  color: var(--amber-500);
+  border-color: var(--amber-500);
+}
+
+[data-theme-style="doodle"][data-theme="light"] .exp-left {
+  border-right-color: var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"][data-theme="light"] .project-left {
+  border-right-color: var(--doodle-border-color);
+}
+
+/* Notebook ruled lines (horizontal) for light mode */
+[data-theme-style="doodle"][data-theme="light"] body {
+  background-image:
+    linear-gradient(var(--doodle-sketch-color) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--doodle-sketch-color) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(208, 91, 56, 0.03) 1px, transparent 1px);
+  background-size: 35px 35px, 35px 35px, 100% 26px;
+  background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+  [data-theme-style="doodle"] .nav-links {
+    border-bottom: 3px solid var(--doodle-border-color);
+  }
+}
+
+@media (max-width: 768px) {
+  [data-theme-style="doodle"] .exp-left {
+    border-right: none;
+    border-bottom: 3.5px solid var(--doodle-border-color);
+  }
+
+  [data-theme-style="doodle"] .project-left {
+    border-right: none;
+    border-bottom: 3.5px solid var(--doodle-border-color);
+  }
+}
+
+/* THEME STYLE DROPDOWN - DOODLE OVERRIDE */
+[data-theme-style="doodle"] .theme-style-btn::before {
+  border-radius: 12px 4px 12px 4px/4px 12px 4px 12px;
+}
+[data-theme-style="doodle"] .theme-style-btn:hover::before {
+  border-color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .theme-style-dropdown {
+  border: 3px solid var(--doodle-border-color);
+  border-radius: 15px 5px 15px 5px/5px 15px 5px 15px;
+  background: var(--doodle-card-bg);
+  box-shadow: 4px 4px 0 var(--doodle-border-color);
+}
+
+[data-theme-style="doodle"] .theme-style-option {
+  font-family: var(--doodle-font-accent);
+  border-radius: 8px 4px/4px 8px;
+}
+
+[data-theme-style="doodle"] .theme-style-option:hover {
+  background: var(--white-10);
+}
+
+[data-theme-style="doodle"] .theme-style-option.active {
+  background: var(--amber-500);
+  color: var(--navy-950) !important;
+}
+
+[data-theme-style="doodle"] .theme-toggle-btn::before {
+  border-radius: 20px 10px/10px 20px;
+}
+[data-theme-style="doodle"] .theme-toggle-btn:hover::before {
+  border-color: var(--amber-500);
+  box-shadow: 3px 3px 0 var(--amber-500);
+}
+
+/* CREATIVE NAME ANIMATIONS: DOODLE THEME */
+[data-theme-style="doodle"] .doodle-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: var(--doodle-font-heading);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.1;
+}
+
+[data-theme-style="doodle"] .doodle-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.2) rotate(var(--doodle-rot, -5deg));
+  animation: doodleSketchIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  filter: url(#doodle-wobble);
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  color: var(--white);
+}
+
+[data-theme-style="doodle"] .doodle-letter:hover {
+  color: var(--amber-500);
+  transform: scale(1.2) rotate(calc(var(--doodle-rot, -5deg) * -1.5)) translateY(-5px);
+}
+
+[data-theme-style="doodle"] .doodle-space {
+  display: inline-block;
+  width: 0.25em;
+}
+
+@keyframes doodleSketchIn {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(var(--doodle-rot, -2deg));
+  }
+}
+
+[data-theme-style="doodle"] .doodle-underline {
+  width: 80%;
+  max-width: 450px;
+  height: 12px;
+  margin: 15px auto 0;
+  border-bottom: 4px dashed var(--amber-500);
+  filter: url(#doodle-wobble);
+  animation: doodleDrawUnderline 0.8s ease-out forwards;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+@keyframes doodleDrawUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+[data-theme-style="doodle"] .doodle-sparkle {
+  position: absolute;
+  pointer-events: none;
+  animation: doodleSparkleOut 0.8s var(--ease-out-expo) forwards;
+  z-index: 5;
+}
+
+@keyframes doodleSparkleOut {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.3) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx, 10px), var(--ty, -30px)) scale(1.2) rotate(var(--rot, 30deg));
+  }
+}
+
+[data-theme-style="doodle"] .doodle-decor {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  animation: doodleFadeInPop 0.5s var(--ease-spring) forwards;
+  transition: opacity 0.5s ease;
+  color: var(--amber-500);
+}
+
+[data-theme-style="doodle"] .doodle-decor.fade-out {
+  opacity: 0 !important;
+}
+
+@keyframes doodleFadeInPop {
+  to {
+    opacity: 0.85;
+  }
+}
+
+/* Doodle specific overrides for footer visitor counter */
+[data-theme-style="doodle"] .footer-counter {
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  z-index: 1;
+}
+[data-theme-style="doodle"] .footer-counter::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--doodle-card-bg);
+  border: 2.5px solid var(--doodle-border-color);
+  z-index: -1;
+  filter: url(#doodle-wobble-button);
+  box-shadow: 3px 3px 0 var(--doodle-border-color);
+}
+[data-theme-style="doodle"] .footer-counter:hover::before {
+  background: var(--amber-glow) !important;
+  border-color: var(--amber-500) !important;
+  box-shadow: 4px 4px 0 var(--amber-500) !important;
+}
+
+/* DOODLE OVERRIDES FOR INTERACTIVE SKILLS MATRIX */
+[data-theme-style="doodle"] .playground-subtitle {
+  font-family: var(--doodle-font-accent);
+  font-size: 1.15rem;
+}
+
+/* Tab overrides */
+[data-theme-style="doodle"] .matrix-tab {
+  font-family: var(--doodle-font-accent) !important;
+  font-size: 1.05rem !important;
+  border: 2.5px solid var(--doodle-border-color) !important;
+  border-radius: 12px 4px 12px 4px/4px 12px 4px 12px !important;
+  background: var(--doodle-card-bg) !important;
+  color: var(--doodle-border-color) !important;
+  filter: url(#doodle-wobble-button);
+}
+
+[data-theme-style="doodle"] .matrix-tab:hover {
+  border-color: var(--amber-500) !important;
+  color: var(--amber-500) !important;
+}
+
+[data-theme-style="doodle"] .matrix-tab.active {
+  background: var(--amber-500) !important;
+  color: var(--navy-950) !important;
+  border-color: var(--amber-500) !important;
+  box-shadow: 3px 3px 0 var(--doodle-border-color) !important;
+  filter: none !important;
+}
+
+/* Card overrides */
+[data-theme-style="doodle"] .matrix-card {
+  border-radius: 15px 5px 15px 5px/5px 15px 5px 15px !important;
+  border: 2.5px solid var(--doodle-border-color) !important;
+  background: var(--doodle-card-bg) !important;
+  box-shadow: 5px 5px 0 var(--doodle-border-color) !important;
+  filter: url(#doodle-wobble);
+  backdrop-filter: none !important;
+  font-family: var(--doodle-font-accent) !important;
+}
+
+[data-theme-style="doodle"] .matrix-card:hover {
+  border-color: var(--amber-500) !important;
+  box-shadow: 6px 6px 0 var(--amber-500) !important;
+}
+
+[data-theme-style="doodle"] .matrix-card .card-title {
+  color: var(--doodle-border-color) !important;
+  font-family: var(--doodle-font-heading) !important;
+  font-size: 1.15rem;
+}
+
+[data-theme-style="doodle"] .matrix-card .card-spotlight {
+  display: none !important;
+}
+
+/* Doodle Details card overlay on hover */
+[data-theme-style="doodle"] .matrix-card .card-hover-details {
+  background: var(--doodle-card-bg) !important;
+  border: 2px dashed var(--doodle-border-color) !important;
+  filter: url(#doodle-wobble-button);
+}
+
+[data-theme-style="doodle"] .matrix-card .detail-title {
+  font-family: var(--doodle-font-heading) !important;
+  font-size: 1.25rem;
+  color: var(--amber-500) !important;
+  border-bottom: 2px dashed var(--doodle-border-color);
+  padding-bottom: 0.15rem;
+  margin-bottom: 0.35rem;
+}
+
+[data-theme-style="doodle"] .matrix-card .detail-desc {
+  font-family: var(--doodle-font-accent);
+  font-size: 0.95rem;
+  color: var(--doodle-border-color) !important;
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+  [data-theme-style="doodle"] .matrix-card {
+    border-width: 1.5px !important;
+    box-shadow: 3px 3px 0 var(--doodle-border-color) !important;
+  }
+}
+

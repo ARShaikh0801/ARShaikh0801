@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arshaikh0801.github.io/sitemap.xml

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaikh Abdulrauf Asifparvez | Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Shaikh Abdulrauf Asifparvez — Full-Stack Developer, Django Developer & Backend Engineer. Explore projects, skills, certifications, and achievements." />
+  <meta name="keywords" content="Shaikh Abdulrauf, Full-Stack Developer, Django Developer, Backend Engineer, Portfolio, Python, Django, PostgreSQL" />
+  <meta name="author" content="Shaikh Abdulrauf Asifparvez" />
+  <link rel="canonical" href="https://arshaikh0801.github.io/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://arshaikh0801.github.io/" />
+  <meta property="og:title" content="Shaikh Abdulrauf Asifparvez | Full-Stack Developer" />
+  <meta property="og:description" content="Full-Stack Developer specialising in Django, Python, PostgreSQL. View my projects, skills and achievements." />
+  <meta property="og:image" content="https://arshaikh0801.github.io/new_photo_mine.jpeg" />
+  <meta property="og:site_name" content="Shaikh Abdulrauf Asifparvez Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://arshaikh0801.github.io/" />
+  <meta property="twitter:title" content="Shaikh Abdulrauf Asifparvez | Full-Stack Developer" />
+  <meta property="twitter:description" content="Full-Stack Developer specialising in Django, Python, PostgreSQL. View my projects, skills and achievements." />
+  <meta property="twitter:image" content="https://arshaikh0801.github.io/new_photo_mine.jpeg" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shaikh Abdulrauf Asifparvez",
+    "url": "https://arshaikh0801.github.io/",
+    "image": "https://arshaikh0801.github.io/new_photo_mine.jpeg",
+    "sameAs": [
+      "https://github.com/ARShaikh0801",
+      "https://www.linkedin.com/in/shaikh-abdulrauf-asifparvez-b4485435a/"
+    ],
+    "jobTitle": "Full-Stack Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "description": "Full-Stack Developer specializing in Django, Python, PostgreSQL. Final-year ICT student at VGEC Ahmedabad.",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Vishwakarma Government Engineering College, Ahmedabad"
+    },
+    "knowsAbout": [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "PostgreSQL",
+      "SQLite",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Git",
+      "Cloudinary",
+      "Supabase"
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Patrick+Hand&family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="doodle-theme.css" />
+  <link rel="stylesheet" href="neobrutalism-theme.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#landing" class="nav-logo">AR</a>
+    <div class="nav-actions">
+      <div class="theme-style-switcher" id="themeStyleSwitcher">
+        <button class="theme-style-btn" id="themeStyleBtn" aria-label="Switch theme style">
+          <i class="fas fa-palette"></i>
+        </button>
+        <div class="theme-style-dropdown" id="themeStyleDropdown">
+          <button class="theme-style-option active" data-style="default" id="optDefault">
+            <i class="fas fa-circle-half-stroke"></i>
+            <span>Modern</span>
+            <i class="fas fa-check theme-style-check"></i>
+          </button>
+          <button class="theme-style-option" data-style="doodle" id="optDoodle">
+            <i class="fas fa-pencil-alt"></i>
+            <span>Doodle</span>
+            <i class="fas fa-check theme-style-check"></i>
+          </button>
+          <button class="theme-style-option" data-style="neobrutalism" id="optNeobrutalism">
+            <i class="fas fa-bolt"></i>
+            <span>Neobrutalism</span>
+            <i class="fas fa-check theme-style-check"></i>
+          </button>
+        </div>
+      </div>
+      <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#landing">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="final arauf resume.pdf" target="_blank" class="nav-resume-link"><i class="fas fa-file-pdf"></i> Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECTION 1: LANDING -->
+  <section id="landing" class="section landing-section">
+    <div class="landing-particles" id="particles"></div>
+    <div class="landing-content">
+      <p class="landing-greeting anim-fade-up">Hello, I'm</p>
+      <h1 class="landing-name anim-fade-up" id="landingName" style="animation-delay:.15s">Shaikh Abdulrauf<br/>Asifparvez</h1>
+      <p class="landing-designations anim-fade-up" style="animation-delay:.3s">
+        <span class="typing-text" id="typingText"></span><span class="cursor">|</span>
+      </p>
+      <p class="landing-intro anim-fade-up" style="animation-delay:.45s">
+        "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it." - Patrick McKenzie
+      </p>
+      <div class="landing-cta anim-fade-up" style="animation-delay:.65s">
+        <a href="#about" class="btn btn-primary">Learn More About Me</a>
+        <a href="final arauf resume.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> View Resume</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="landing-socials">
+        <a href="https://github.com/ARShaikh0801" target="_blank" rel="noopener noreferrer" class="social-icon anim-pop" style="animation-delay:.85s" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/shaikh-abdulrauf-asifparvez-b4485435a/" target="_blank" rel="noopener noreferrer" class="social-icon anim-pop" style="animation-delay:.95s" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:arauf0801@gmail.com" class="social-icon anim-pop" style="animation-delay:1.05s" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-arrow"></span>
+    </a>
+  </section>
+
+  <!-- SECTION 2: ABOUT ME -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">About Me</h2>
+      <div class="about-grid">
+        <div class="about-photo-wrapper" data-anim="slide-right">
+          <div class="about-photo-glow"></div>
+          <!-- <img src="profile_image.jpg" alt="Abdulrauf Shaikh" class="about-photo" /> -->
+          <img src="new_photo_mine.jpeg" alt="Abdulrauf Shaikh" class="about-photo" />
+        </div>
+        <div class="about-text-wrapper">
+          <p class="about-paragraph" data-anim="fade-up">
+            I am Abdulrauf Shaikh, a full-stack web developer and final-year ICT student at VGEC Ahmedabad with a CGPA of 8.39. Over the past two years, I have independently built multiple production-ready Django applications - from e-commerce platforms and job portals to blogging platforms with OAuth, dynamic theming engines, and Bloom Filter optimizations. I work primarily with Python, Django, PostgreSQL, Tailwind CSS, and Git, and have hands-on experience with cloud deployments on Render using Supabase, Cloudinary, and WhiteNoise. What sets me apart is my ability to own an entire project - from database design and backend logic to responsive UI and production deployment. I am detail-oriented, self-driven, and always focused on writing clean, maintainable code that solves real problems.
+          </p>
+          <div class="about-cards">
+            <div class="about-card mission-card" data-anim="flip">
+              <div class="about-card-inner">
+                <div class="about-card-front">
+                  <i class="fas fa-bullseye"></i>
+                  <h3>Mission</h3>
+                </div>
+                <div class="about-card-back">
+                  <p>To build scalable, user-centered web applications that solve real-world problems through clean code, thoughtful architecture, and continuous learning.</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-card vision-card" data-anim="flip" style="animation-delay:.2s">
+              <div class="about-card-inner">
+                <div class="about-card-front">
+                  <i class="fas fa-eye"></i>
+                  <h3>Vision</h3>
+                </div>
+                <div class="about-card-back">
+                  <p>To grow into a well-rounded backend engineer who contributes to impactful products, and eventually builds technology that creates meaningful change.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-buttons">
+            <a href="final arauf resume.pdf" target="_blank" class="about-btn resume-btn" data-anim="slide-up" style="animation-delay:.05s"><i class="fas fa-file-pdf"></i> View Resume</a>
+            <a href="#experience" class="about-btn" data-anim="slide-up" style="animation-delay:.1s">Work Experience</a>
+            <a href="#education" class="about-btn" data-anim="slide-up" style="animation-delay:.2s">Education</a>
+            <a href="#projects" class="about-btn" data-anim="slide-up" style="animation-delay:.3s">Projects</a>
+            <a href="#skills" class="about-btn" data-anim="slide-up" style="animation-delay:.4s">Skills</a>
+            <a href="#certifications" class="about-btn" data-anim="slide-up" style="animation-delay:.5s">Certifications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: WORK EXPERIENCE -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">Work Experience</h2>
+      <div class="experience-timeline">
+        <div class="exp-card" data-anim="slide-left">
+          <div class="exp-left">
+            <span class="exp-badge">Freelance / Academic</span>
+            <h3 class="exp-designation">Independent Full-Stack Developer</h3>
+            <p class="exp-company">Self-Initiated Projects</p>
+            <div class="exp-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Mehsana, India</span>
+              <span><i class="fas fa-calendar-alt"></i> Jan 2024 - Present</span>
+            </div>
+          </div>
+          <div class="exp-right">
+            <h4>Responsibilities</h4>
+            <ul class="exp-list">
+              <li data-anim="stagger">Designed and developed full-stack Django web applications from scratch including database modeling, backend logic, and frontend UI</li>
+              <li data-anim="stagger">Deployed applications on Render with PostgreSQL (Supabase), Cloudinary media storage, and WhiteNoise for static files</li>
+              <li data-anim="stagger">Implemented OAuth authentication, REST APIs, role-based access control, and third-party API integrations</li>
+              <li data-anim="stagger">Participated in 2 hackathons building working prototypes under time constraints</li>
+            </ul>
+            <h4>Key Achievements</h4>
+            <ul class="exp-list exp-achievements">
+              <li data-anim="stagger"><i class="fas fa-trophy"></i> Deployed 2 live production applications accessible publicly with full cloud configuration</li>
+              <li data-anim="stagger"><i class="fas fa-trophy"></i> Built a multilingual platform supporting 18 Indian languages using Google Translate API</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: EDUCATION -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">Education</h2>
+      <div class="education-timeline">
+        <!-- BTech -->
+        <div class="edu-card" data-anim="drop-in">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-content">
+            <span class="edu-duration">2023 - 2027</span>
+            <h3>BTech in Information and Communication Technology</h3>
+            <p class="edu-institution"><i class="fas fa-university"></i> Vishwakarma Government Engineering College, Ahmedabad</p>
+            <span class="edu-mode">Full-time</span>
+            <ul class="edu-highlights">
+              <li>CGPA: 8.39 - consistently strong academic performance</li>
+              <li>Coursework: DSA, OS, DBMS, OOP, Digital Logic, CN</li>
+              <li>Active project builder with 3 full-stack deployed applications</li>
+            </ul>
+          </div>
+        </div>
+        <!-- HSC -->
+        <div class="edu-card" data-anim="rise-up">
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <div class="edu-content">
+            <span class="edu-duration">2021 - 2023</span>
+            <h3>HSC (Class 12) - Science</h3>
+            <p class="edu-institution"><i class="fas fa-university"></i> Shree J.M. Chaudhry Sarvajanik Vidhyalay</p>
+            <span class="edu-mode">Full-time</span>
+            <ul class="edu-highlights">
+              <li>Percentage: 81.07% - Ranked 7th in the entire school</li>
+              <li>Gujarat Secondary and Higher Secondary Education Board (GSEB)</li>
+              <li>Strong foundation in Physics, Chemistry, and Mathematics</li>
+            </ul>
+          </div>
+        </div>
+        <!-- SSC -->
+        <div class="edu-card" data-anim="rise-up" style="animation-delay:.15s">
+          <div class="edu-icon"><i class="fas fa-book-reader"></i></div>
+          <div class="edu-content">
+            <span class="edu-duration">2019 - 2021</span>
+            <h3>SSC (Class 10)</h3>
+            <p class="edu-institution"><i class="fas fa-university"></i> Shree J.M. Chaudhry Sarvajanik Vidhyalay</p>
+            <span class="edu-mode">Full-time</span>
+            <ul class="edu-highlights">
+              <li>Percentage: 83.83%</li>
+              <li>Gujarat Secondary Education Board (GSEB)</li>
+              <li>Strong foundation in Mathematics and Science</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">Projects</h2>
+
+      <!-- Project 1: Articlio -->
+      <div class="project-card" data-anim="slide-left">
+        <div class="project-left">
+          <span class="project-number">01</span>
+          <h3 class="project-title">Articlio</h3>
+          <p class="project-subtitle">Blogging Platform</p>
+          <span class="project-type">Personal Project (Deployed)</span>
+          <span class="project-duration"><i class="fas fa-calendar-alt"></i> Sep 2025 - Jan 2026</span>
+          <div class="project-links">
+            <a href="https://articlio-nb11.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/ARShaikh0801/Articlio" target="_blank" rel="noopener noreferrer" class="project-link project-link-github"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="project-right">
+          <p class="project-desc">A production-ready blogging platform built with Django and Tailwind CSS v4, featuring multi-channel OAuth authentication via Google and GitHub, a dynamic theming engine with 5 accent themes, and advanced performance optimizations including Bloom Filter for username validation. Deployed live on Render with PostgreSQL backend.</p>
+          <div class="project-outcomes">
+            <h4>Key Outcomes</h4>
+            <div class="outcome-item" data-anim="pop-in">
+              <span class="outcome-num">1</span>
+              <p>Implemented OAuth authentication (Google/GitHub) with role-based access for Reader and Author</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.1s">
+              <span class="outcome-num">2</span>
+              <p>Built nested threaded comments, reading history with scroll progress tracking, bookmarks, and likes system</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.2s">
+              <span class="outcome-num">3</span>
+              <p>Optimized using in-memory Bloom Filter for instant username checks and session-based view tracking</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.3s">
+              <span class="outcome-num">4</span>
+              <p>Configured CSP security headers and WhiteNoise static file caching for production</p>
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag" data-anim="elastic">Django 5.2</span>
+            <span class="tech-tag" data-anim="elastic">PostgreSQL</span>
+            <span class="tech-tag" data-anim="elastic">Tailwind CSS v4</span>
+            <span class="tech-tag" data-anim="elastic">OAuth</span>
+            <span class="tech-tag" data-anim="elastic">WhiteNoise</span>
+            <span class="tech-tag" data-anim="elastic">Render</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: WorkWhiz -->
+      <div class="project-card" data-anim="slide-right">
+        <div class="project-left">
+          <span class="project-number">02</span>
+          <h3 class="project-title">WorkWhiz</h3>
+          <p class="project-subtitle">Labour Job Portal</p>
+          <span class="project-type">Personal Project (Deployed)</span>
+          <span class="project-duration"><i class="fas fa-calendar-alt"></i> Jun 2024 - Jan 2025</span>
+          <div class="project-links">
+            <a href="https://workwhiz.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/ARShaikh0801/WorkWhiz" target="_blank" rel="noopener noreferrer" class="project-link project-link-github"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="project-right">
+          <p class="project-desc">A full-stack multi-role job portal connecting workers and contractors, featuring role-specific dashboards, job posting and application management, multilingual support for 18 Indian languages via Google Translate API, and full production deployment on Render with Supabase PostgreSQL and Cloudinary.</p>
+          <div class="project-outcomes">
+            <h4>Key Outcomes</h4>
+            <div class="outcome-item" data-anim="pop-in">
+              <span class="outcome-num">1</span>
+              <p>Built separate dashboards for workers and contractors with bidirectional rating system</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.1s">
+              <span class="outcome-num">2</span>
+              <p>Integrated Google Translate API supporting 18 regional Indian languages</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.2s">
+              <span class="outcome-num">3</span>
+              <p>Implemented secure email-based password reset (SMTP) and Cloudinary profile image uploads</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.3s">
+              <span class="outcome-num">4</span>
+              <p>Deployed live with PostgreSQL (Supabase), WhiteNoise, and environment-based settings</p>
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag" data-anim="elastic">Django 5.x</span>
+            <span class="tech-tag" data-anim="elastic">PostgreSQL</span>
+            <span class="tech-tag" data-anim="elastic">Cloudinary</span>
+            <span class="tech-tag" data-anim="elastic">Google Translate API</span>
+            <span class="tech-tag" data-anim="elastic">Render</span>
+            <span class="tech-tag" data-anim="elastic">Supabase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: BuyCart -->
+      <div class="project-card" data-anim="slide-left">
+        <div class="project-left">
+          <span class="project-number">03</span>
+          <h3 class="project-title">BuyCart</h3>
+          <p class="project-subtitle">E-Commerce Platform</p>
+          <span class="project-type">Personal Project</span>
+          <span class="project-duration"><i class="fas fa-calendar-alt"></i> Jan 2025 - Jun 2025</span>
+          <div class="project-links">
+            <a href="https://github.com/ARShaikh0801/buyCart" target="_blank" rel="noopener noreferrer" class="project-link project-link-github"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="project-right">
+          <p class="project-desc">A full-stack e-commerce platform with distinct customer and dealer portals, featuring Stripe payment integration, a dedicated dealer dashboard for inventory and blog management using Quill Editor, and a mobile-first responsive UI built with Bootstrap 5.</p>
+          <div class="project-outcomes">
+            <h4>Key Outcomes</h4>
+            <div class="outcome-item" data-anim="pop-in">
+              <span class="outcome-num">1</span>
+              <p>Built separate portals for customers and dealers with role-based access control</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.1s">
+              <span class="outcome-num">2</span>
+              <p>Integrated Stripe API for secure end-to-end payment processing</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.2s">
+              <span class="outcome-num">3</span>
+              <p>Developed dealer dashboard with inventory management, sales tracking, and rich-text blogging</p>
+            </div>
+            <div class="outcome-item" data-anim="pop-in" style="animation-delay:.3s">
+              <span class="outcome-num">4</span>
+              <p>Designed mobile-first responsive UI with Bootstrap 5</p>
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag" data-anim="elastic">Django</span>
+            <span class="tech-tag" data-anim="elastic">Bootstrap 5</span>
+            <span class="tech-tag" data-anim="elastic">JavaScript</span>
+            <span class="tech-tag" data-anim="elastic">SQLite</span>
+            <span class="tech-tag" data-anim="elastic">Stripe API</span>
+            <span class="tech-tag" data-anim="elastic">Quill Editor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: SKILLS -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">Skills</h2>
+      <div class="skills-grid">
+        <!-- Backend -->
+        <div class="skill-category" data-anim="scale-in">
+          <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend Development</h3>
+          <div class="skill-bar-group">
+            <div class="skill-item">
+              <div class="skill-info"><span>Python</span><span class="skill-pct" data-target="88">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Django</span><span class="skill-pct" data-target="85">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Django REST Framework</span><span class="skill-pct" data-target="75">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>REST API Design</span><span class="skill-pct" data-target="78">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Frontend -->
+        <div class="skill-category" data-anim="scale-in" style="animation-delay:.1s">
+          <div class="skill-cat-icon"><i class="fas fa-palette"></i></div>
+          <h3>Frontend Development</h3>
+          <div class="skill-bar-group">
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML5 / CSS3</span><span class="skill-pct" data-target="90">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>JavaScript</span><span class="skill-pct" data-target="78">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Tailwind CSS</span><span class="skill-pct" data-target="82">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Bootstrap</span><span class="skill-pct" data-target="85">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Databases & Cloud -->
+        <div class="skill-category" data-anim="scale-in" style="animation-delay:.2s">
+          <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+          <h3>Databases & Cloud</h3>
+          <div class="skill-bar-group">
+            <div class="skill-item">
+              <div class="skill-info"><span>PostgreSQL</span><span class="skill-pct" data-target="78">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>SQLite</span><span class="skill-pct" data-target="85">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Cloudinary</span><span class="skill-pct" data-target="75">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Supabase</span><span class="skill-pct" data-target="72">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Developer Tools -->
+        <div class="skill-category" data-anim="scale-in" style="animation-delay:.3s">
+          <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+          <h3>Developer Tools</h3>
+          <div class="skill-bar-group">
+            <div class="skill-item">
+              <div class="skill-info"><span>Git & GitHub</span><span class="skill-pct" data-target="85">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>VS Code</span><span class="skill-pct" data-target="92">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Postman</span><span class="skill-pct" data-target="50">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Linux (basic)</span><span class="skill-pct" data-target="68">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6.5: INTERACTIVE SKILLS PLAYGROUND -->
+  <section id="skills-playground" class="section skills-playground-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">Interactive Skills Matrix</h2>
+      <p class="playground-subtitle" data-anim="fade-up">
+        Filter by category, hover over any card to reveal details, and move your mouse to experience the 3D parallax tilt.
+      </p>
+
+      <div class="skills-matrix-tabs" data-anim="fade-up">
+        <button class="matrix-tab active" data-category="all">All Skills</button>
+        <button class="matrix-tab" data-category="languages">Languages</button>
+        <button class="matrix-tab" data-category="frameworks">Frameworks</button>
+        <button class="matrix-tab" data-category="databases">Databases & Cloud</button>
+        <button class="matrix-tab" data-category="tools">Developer Tools</button>
+      </div>
+      
+      <div class="skills-playground-wrapper" data-anim="scale-in">
+        <div class="skills-matrix-grid" id="skillsMatrixGrid">
+          <!-- Dynamically populated skill cards -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CERTIFICATIONS -->
+  <section id="certifications" class="section certifications-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">Certifications</h2>
+      <div class="cert-grid">
+        <!-- Cert 1 -->
+        <div class="cert-card" data-anim="waterfall" data-tilt>
+          <div class="cert-image-wrapper">
+            <img src="certificates/scaler_python_cert.jpg" alt="Scaler Python Programming Certificate" class="cert-image" loading="lazy" />
+          </div>
+          <div class="cert-body">
+            <h3>Python Programming Course</h3>
+            <p class="cert-provider"><i class="fas fa-building"></i> Scaler</p>
+            <p class="cert-date"><i class="fas fa-calendar"></i> April 2025</p>
+            <p class="cert-expires"><i class="fas fa-infinity"></i> Never Expires</p>
+            <div class="cert-actions">
+              <a href="https://moonshot.scaler.com/s/li/rERGu7yiwA" target="_blank" rel="noopener noreferrer" class="cert-link">
+                <i class="fas fa-external-link-alt"></i> Verify
+              </a>
+              <a href="certificates/scaler_python_cert.jpg" target="_blank" rel="noopener noreferrer" class="cert-link cert-link-view">
+                <i class="fas fa-image"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Cert 2 -->
+        <div class="cert-card" data-anim="waterfall" style="animation-delay:.15s" data-tilt>
+          <div class="cert-image-wrapper">
+            <img src="certificates/tata_forage_cert.jpg" alt="Tata Forage Data Visualisation Certificate" class="cert-image" loading="lazy" />
+          </div>
+          <div class="cert-body">
+            <h3>Tata Group - Data Visualisation</h3>
+            <p class="cert-provider"><i class="fas fa-building"></i> Tata - Forage</p>
+            <p class="cert-date"><i class="fas fa-calendar"></i> April 2025</p>
+            <p class="cert-expires"><i class="fas fa-infinity"></i> Never Expires</p>
+            <p class="cert-id"><i class="fas fa-fingerprint"></i> ID: YW2KCSMratXMmubXA</p>
+            <div class="cert-actions">
+              <a href="certificates/tata_forage_cert.jpg" target="_blank" rel="noopener noreferrer" class="cert-link cert-link-view">
+                <i class="fas fa-image"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Cert 3 -->
+        <div class="cert-card" data-anim="waterfall" style="animation-delay:.3s" data-tilt>
+          <div class="cert-image-wrapper">
+            <img src="certificates/launched_webdev_cert.jpg" alt="LaunchEd Web Development Certificate" class="cert-image" loading="lazy" />
+          </div>
+          <div class="cert-body">
+            <h3>Web Development Course</h3>
+            <p class="cert-provider"><i class="fas fa-building"></i> LaunchEd (IIT Kharagpur - Kshitij)</p>
+            <p class="cert-date"><i class="fas fa-calendar"></i> August 2025</p>
+            <p class="cert-expires"><i class="fas fa-infinity"></i> Never Expires</p>
+            <p class="cert-id"><i class="fas fa-fingerprint"></i> ID: LEDCC5428</p>
+            <div class="cert-actions">
+              <a href="certificates/launched_webdev_cert.jpg" target="_blank" rel="noopener noreferrer" class="cert-link cert-link-view">
+                <i class="fas fa-image"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: ACHIEVEMENTS -->
+  <section id="achievements" class="section achievements-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">Achievements</h2>
+      <p class="achievements-sub" data-anim="fade-up">Milestones built through code, consistency, and curiosity.</p>
+
+      <!-- Stat Counters -->
+      <div class="stat-counters" data-anim="fade-up">
+        <div class="stat-item">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+          </div>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+          </div>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-count="3">0</span>
+          </div>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-count="2">0</span>
+          </div>
+          <span class="stat-label">Awards</span>
+        </div>
+      </div>
+
+      <!-- Achievement Cards -->
+      <div class="achieve-grid">
+        <!-- Achievement 1 -->
+        <div class="achieve-card" data-anim="zoom-spring">
+          <div class="achieve-badge professional"><i class="fas fa-trophy"></i> Professional</div>
+          <span class="achieve-year">2026</span>
+          <h3>Participant - SBS Hack The Gap 2026</h3>
+          <p class="achieve-inst"><i class="fas fa-university"></i> Shanti Business School, Ahmedabad</p>
+          <p class="achieve-desc">Participated in National-Level Hackathon as part of Team Innovexa, representing Vishwakarma Government Engineering College. Built a full-stack web application under competitive time constraints.</p>
+          <a href="achievement/sbs_hackathon_certi.jpg" target="_blank" rel="noopener noreferrer">
+            <div class="achieve-image-wrapper">
+              <img src="achievement/sbs_hackathon_certi.jpg" alt="SBS Hack The Gap 2026 Certificate" loading="lazy" />
+            </div>
+          </a>
+        </div>
+        <!-- Achievement 2 -->
+        <div class="achieve-card" data-anim="zoom-spring" style="animation-delay:.15s">
+          <div class="achieve-badge professional"><i class="fas fa-trophy"></i> Professional</div>
+          <span class="achieve-year">2025</span>
+          <h3>Participant - Hack With Gujarat</h3>
+          <p class="achieve-inst"><i class="fas fa-university"></i> DevXpanse</p>
+          <p class="achieve-desc">Participated in Hack With Gujarat hackathon, building the base version of WorkWhiz - a multi-role labour job portal using Django - under time pressure.</p>
+          <a href="achievement/devxpanse_hackathon_certi.jpeg" target="_blank" rel="noopener noreferrer">
+            <div class="achieve-image-wrapper">
+              <img src="achievement/devxpanse_hackathon_certi.jpeg" alt="Hack With Gujarat Certificate" loading="lazy" />
+            </div>
+          </a>
+        </div>
+        <!-- Achievement 3 -->
+        <div class="achieve-card" data-anim="zoom-spring" style="animation-delay:.3s">
+          <div class="achieve-badge academic"><i class="fas fa-graduation-cap"></i> Academic</div>
+          <span class="achieve-year">2023</span>
+          <h3>School Rank 7 in Class 12 Board Exams</h3>
+          <p class="achieve-inst"><i class="fas fa-university"></i> Shree J.M. Chaudhry Sarvajanik Vidhyalay</p>
+          <p class="achieve-desc">Ranked 7th in the entire school in the Gujarat Secondary and Higher Secondary Education Board (GSEB) Class 12 examinations with 81.07%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title" data-anim="fade-up">Contact</h2>
+      <p class="contact-heading" data-anim="fade-up">Let's Build Something Together</p>
+      <div class="contact-grid">
+        <!-- Left: Form -->
+        <div class="contact-form-wrapper" data-anim="slide-up-left">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <input type="text" id="formName" name="name" required autocomplete="name" />
+              <label for="formName">Full Name</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="formEmail" name="email" required autocomplete="email" />
+              <label for="formEmail">Email Address</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="formSubject" name="subject" required />
+              <label for="formSubject">Subject</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="formMessage" name="message" rows="4" required></textarea>
+              <label for="formMessage">Message</label>
+              <span class="form-line"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-send" id="sendBtn">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+        <!-- Right: Info -->
+        <div class="contact-info-panel" data-anim="slide-up-right">
+          <h3>Get In Touch</h3>
+          <div class="contact-info-row">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="info-label">Email</span>
+              <a href="mailto:arauf0801@gmail.com">arauf0801@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-row">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <span class="info-label">Phone</span>
+              <a href="tel:+919328116358">+91-93281-16358</a>
+            </div>
+          </div>
+          <div class="contact-info-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="info-label">Location</span>
+              <p>Mehsana, Gujarat, India</p>
+            </div>
+          </div>
+          <div class="contact-info-row">
+            <i class="fab fa-linkedin-in"></i>
+            <div>
+              <span class="info-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/shaikh-abdulrauf-asifparvez-b4485435a/" target="_blank" rel="noopener noreferrer">Shaikh Abdulrauf Asifparvez</a>
+            </div>
+          </div>
+          <div class="contact-info-row">
+            <i class="fab fa-github"></i>
+            <div>
+              <span class="info-label">GitHub</span>
+              <a href="https://github.com/ARShaikh0801" target="_blank" rel="noopener noreferrer">ARShaikh0801</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">AR</span>
+        <p class="footer-name">Shaikh Abdulrauf Asifparvez</p>
+        <p class="footer-tagline">Clean code. Real solutions. Always learning.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/ARShaikh0801" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/shaikh-abdulrauf-asifparvez-b4485435a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:arauf0801@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-counter" id="visitorCounter" style="display: none;">
+        <span class="counter-label"><i class="fas fa-eye"></i> Views:</span>
+        <span class="counter-number" id="visitorCount">0</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Shaikh Abdulrauf Asifparvez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SVG Filters for Doodle Theme Hand-Drawn Wobble -->
+  <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="doodle-wobble">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="doodle-wobble-large">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="doodle-wobble-button">
+        <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <script src="index.js"></script>
+</body>
+</html>
