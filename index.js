@@ -686,7 +686,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Trigger theme-specific name animation
     initNameAnimation(style);
+
+    // Recalculate the violet stripe height after name animation settles
+    setTimeout(updateStripeHeight, 100);
+    setTimeout(updateStripeHeight, 600);
   };
+
+  // NEOBRUTALISM STRIPE HEIGHT — dynamically match the name bottom edge
+  function updateStripeHeight() {
+    const section = document.querySelector('.landing-section');
+    const nameEl = document.getElementById('landingName');
+    if (!section || !nameEl) return;
+
+    const isNeo = document.documentElement.getAttribute('data-theme-style') === 'neobrutalism';
+    if (!isNeo) {
+      section.style.removeProperty('--stripe-height');
+      return;
+    }
+
+    const sectionRect = section.getBoundingClientRect();
+    const nameRect = nameEl.getBoundingClientRect();
+    // Add a small buffer (12px) so the stripe extends slightly past the name
+    const stripeHeight = nameRect.bottom - sectionRect.top + 12;
+    section.style.setProperty('--stripe-height', stripeHeight + 'px');
+  }
+
+  // Run on resize
+  window.addEventListener('resize', updateStripeHeight);
+
+  // Run after fonts finish loading (font swap can change text height)
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
+      updateStripeHeight();
+    });
+  }
+
+  // Use ResizeObserver on the name element for live tracking
+  const nameObserverTarget = document.getElementById('landingName');
+  if (nameObserverTarget && typeof ResizeObserver !== 'undefined') {
+    const stripeObserver = new ResizeObserver(() => {
+      updateStripeHeight();
+    });
+    stripeObserver.observe(nameObserverTarget);
+  }
 
   // Initialize theme style
   setThemeStyle(getPreferredStyle());
